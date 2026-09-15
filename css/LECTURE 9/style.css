@@ -1,0 +1,62 @@
+/* *{
+   color: rgb(67, 60, 163); 
+} */
+
+
+p {
+    color: red
+}
+
+span {
+    color: blueviolet;
+}
+
+.hello {
+    color: brown;
+}
+
+#nihal {
+    color: blue;
+    /* background-color: yellow; */
+}
+
+/* div p {
+    color: blue;
+} */
+
+/* div > p {
+    color: blue;
+} */
+
+/* a + p {
+    color: blu;
+} */
+
+/* a~p {
+    color: blue;
+}
+
+nihal:hover {
+    background-color: red;
+} */
+
+/* li:last-child{
+    color: green;
+} */
+
+/* li:nth-child(5){
+    color: blue;
+} */
+
+h1::after{
+    content: " Hello";
+}
+h1::before{
+    content: "Today ";
+}
+
+h1::first-letter {
+    color: red;
+}
+
+h

@@ -1,0 +1,73 @@
+h1 {
+    /* background-color: rgb(185, 99, 99);  */
+    font-size: 100px;
+}
+
+#wrapper {
+    /* height: 500px; */
+    /* background: linear-gradient(to left, red,blue); */
+
+    /* background: linear-gradient(45deg, red,blue, yellow, pink); */
+
+    /* background: radial-gradient(circle, red, green); */
+
+    /* background: conic-gradient(red, yellow, green); */
+
+    /* background-image: url(https://images.pexels.com/photos/38443215/pexels-photo-38443215.jpeg); */
+
+    /* background-repeat: no-repeat; */
+    /* background-position: bottom; */
+    /* background-size: contain; */
+
+    /* border-width: 20px;
+    border-style: solid;
+    border-color: red;
+
+    border: 2px solid navy; */
+
+    border: 10px solid blue;
+
+    /* border-radius:20px;
+    border-top-left-radius: 0px; */
+
+    padding: 40px;
+
+    margin: 40px;
+
+    width: 1000px;
+    box-sizing: border-box;
+
+
+
+}
+
+p{
+    border: 1px solid red;
+    /* padding: 0px 40px 0px 40px; */
+    /* padding: 40px 0px;   */
+}
+
+.red-border{
+    border: 1px solid red;
+
+}
+
+#mahi{
+    margin: auto;
+    width:100px;
+    
+}
+
+span{
+    display: inline-block;
+    /* padding: 10px; */
+    /* margin-left: 10px; */
+    /* background-color: pink; */
+    width: 50px;
+    height: 50px;
+}
+
+#bholu{
+    padding: 40px;
+    box-sizing:border-box;
+}
