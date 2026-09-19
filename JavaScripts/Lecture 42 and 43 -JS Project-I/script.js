@@ -162,19 +162,8 @@ const taskCount = document.querySelector("#task-count")
 const taskComplete = document.querySelector("#complete-count")
 
 
-let todos = [{
-    id: Date.now() + 1,
-    text: "Go to gym",
-    isCompleted: false,
-}, {
-    id: Date.now() + 2,
-    text: "Go to hii",
-    isCompleted: true,
-}, {
-    id: Date.now() + 3,
-    text: "Go to hello",
-    isCompleted: false,
-}]
+let todos = JSON.parse(localStorage.getItem("todos") )|| []
+console.log(todos);
 
 let editTodoId = null
 
@@ -200,6 +189,8 @@ todoForm.addEventListener("submit", (e) => {
 
         const li = document.querySelector(`li[data-id="${editTodoId}"]`)
         li.querySelector("p").textContent = todoValue
+        localStorage.setItem("todos", JSON.stringify(todos))
+
     } else {
         let newTodo = {
             id: Date.now(),
@@ -207,6 +198,8 @@ todoForm.addEventListener("submit", (e) => {
             isCompleted: false,
         }
         todos.push(newTodo)
+        localStorage.setItem("todos", JSON.stringify(todos))
+
         addTodo(newTodo)
     }
 
@@ -244,7 +237,7 @@ function addTodo(todo) {
 
     taskCount.textContent = `TASK (${todos.length})`
     taskComplete.textContent = `COMPLETED: ${todos.filter((todo) => todo.isCompleted).length}`
-    
+
 }
 
 todoList.addEventListener("click", (e) => {
@@ -271,7 +264,7 @@ todoList.addEventListener("click", (e) => {
             }
             return todo
         })
-
+localStorage.setItem("todos", JSON.stringify(todos))
         rendorTodo()
     }
 })
@@ -284,6 +277,7 @@ function deleteTodo(e, id) {
             return todo
         }
     })
+    localStorage.setItem("todos", JSON.stringify(todos))
 }
 
 function startEdit(id) {
